@@ -55,4 +55,12 @@ public class FunnyAlgorithmsTest
 		String input = null;
 		fn.stringToIntConverter(input);
 	}
+	@Test(expected = IllegalArgumentException.class)
+	public void selectionSortOrderIllegalArgumentException()
+	{
+		int[] arr = new int[]{4, 7, 3, 0};
+		int order = 3;
+		fn.selectionSort(arr, order);
+	}
+
 }
