@@ -25,4 +25,11 @@ public class FunnyAlgorithmsTest
 			Assert.assertEquals(fn.stringToIntConverter(input), expectedOutput);
 		}
 	}
+
+	@org.junit.Test(expected = IllegalArgumentException.class)
+	public void stringToIntConverterShouldThrowIllegalArgumentException()
+	{
+		String input = "2 3";
+		fn.stringToIntConverter(input);
+	}
 }
