@@ -115,6 +115,14 @@ public class FunnyAlgorithmsTest
 		Assert.assertEquals(fn.binarySearch(arr, target), -1);
 	}
 
+	@Test
+	public void binarySearchTest() {
+		int[] arr = new int[] {3, 5, 8, 10, 13, 17, 20};
+		int target = 13;
+
+		Assert.assertEquals(fn.binarySearch(arr, target), 4);
+	}
+
 
 
 }
