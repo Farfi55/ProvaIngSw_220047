@@ -72,8 +72,10 @@ public class FunnyAlgorithms {
 		if(number == null)
 			throw new IllegalArgumentException();
 
-		// removes all white-spaces from the number
-		number = number.replaceAll("\\s+","");
+		// removes all leading white-spaces from the number
+		number = number.replaceAll("^\\s+","");
+		// removes all trailing white-spaces from the number
+		number = number.replaceAll("\\s+$","");
 
 		// checks if number contains only up to 5 digits and possibly a leading minus sign
 		if(number.matches("^-?\\d{1,6}$")) {
