@@ -68,8 +68,23 @@ public class FunnyAlgorithms {
 	 * @return
 	 * @throws UnsupportedOperationException
 	 */
-	public int stringToIntConverter(String number) throws UnsupportedOperationException {
-		throw new UnsupportedOperationException("To be implemented");
+	public int stringToIntConverter(String number) throws UnsupportedOperationException, IllegalArgumentException {
+		if(number == null)
+			throw new IllegalArgumentException();
+
+		// removes all white-spaces from the number
+		number = number.replaceAll("\\s+","");
+
+		// checks if number contains only up to 5 digits and possibly a leading minus sign
+		if(number.matches("^-?\\d{1,6}$")) {
+			int parsed_number = Integer.parseInt(number);
+			if(parsed_number < -32768 || parsed_number > 32767)
+				throw new UnsupportedOperationException();
+			return parsed_number;
+		}
+		else {
+			throw new IllegalArgumentException();
+		}
 	}
 
 }
