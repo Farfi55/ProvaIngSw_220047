@@ -21,7 +21,7 @@ public class FunnyAlgorithms {
 			} else if (target < nums[mid]) {
 				right = mid - 1;
 			} else {
-				left = mid + 2;
+				left = mid + 1;
 			}
 		}
 		// `target` doesn't exist in the array
