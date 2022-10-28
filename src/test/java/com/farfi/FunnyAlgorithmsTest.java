@@ -41,4 +41,11 @@ public class FunnyAlgorithmsTest
 		String input = "32768";
 		fn.stringToIntConverter(input);
 	}
+
+	@org.junit.Test(expected = UnsupportedOperationException.class)
+	public void stringToIntConverterLowerBound()
+	{
+		String input = "-32769";
+		fn.stringToIntConverter(input);
+	}
 }
