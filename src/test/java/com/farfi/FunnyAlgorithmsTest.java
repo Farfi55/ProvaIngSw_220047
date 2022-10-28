@@ -3,6 +3,8 @@ package com.farfi;
 import org.junit.Assert;
 import org.junit.Before;
 
+import java.lang.UnsupportedOperationException;
+
 public class FunnyAlgorithmsTest
 {
 	private FunnyAlgorithms fn;
@@ -30,6 +32,13 @@ public class FunnyAlgorithmsTest
 	public void stringToIntConverterShouldThrowIllegalArgumentException()
 	{
 		String input = "2 3";
+		fn.stringToIntConverter(input);
+	}
+
+	@org.junit.Test(expected = UnsupportedOperationException.class)
+	public void stringToIntConverterUpperBound()
+	{
+		String input = "32768";
 		fn.stringToIntConverter(input);
 	}
 }
