@@ -107,5 +107,14 @@ public class FunnyAlgorithmsTest
 	}
 
 
+	@Test
+	public void binarySearchMissingElementTest() {
+		int[] arr = new int[] {3, 5, 8, 13, 17, 20};
+		int target = 15;
+
+		Assert.assertEquals(fn.binarySearch(arr, target), -1);
+	}
+
+
 
 }
