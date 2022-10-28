@@ -91,4 +91,21 @@ public class FunnyAlgorithmsTest
 		}
 	}
 
+
+	@Test
+	public void swapTest() {
+		int[] arr = new int[] {3, 5, 8, 13, 17, 20};
+		int[] expectedSwappedArr = new int[] {3, 5, 20, 13, 17, 8};
+		int i = 2, j = 5;
+
+		FunnyAlgorithms.swap(arr, i, j);
+
+		for (int k = 0; k < arr.length; k++)
+		{
+			Assert.assertEquals(arr[k], expectedSwappedArr[k]);
+		}
+	}
+
+
+
 }
