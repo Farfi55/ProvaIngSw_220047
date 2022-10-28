@@ -78,4 +78,17 @@ public class FunnyAlgorithmsTest
 	}
 
 
+	@Test
+	public void selectionSortDecreasing()
+	{
+		int[] arr = new int[]{199, 7, 3, 0, -78};
+		int[] expectedSorted = new int[]{199, 7, 3, 0, -78};
+		int order = 0;
+		fn.selectionSort(arr, order);
+		for (int i = 0; i < arr.length; i++)
+		{
+			Assert.assertEquals(arr[i], expectedSorted[i]);
+		}
+	}
+
 }
