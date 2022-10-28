@@ -1,8 +1,8 @@
 package com.farfi;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.joda.time.DateTime;
+import org.joda.time.LocalTime;
+import org.junit.*;
 
 import java.lang.UnsupportedOperationException;
 
@@ -10,10 +10,32 @@ public class FunnyAlgorithmsTest
 {
 	private FunnyAlgorithms fn;
 
+	@BeforeClass
+	public static void BeforeClass()
+	{
+		LocalTime lt = new LocalTime();
+		System.out.println("BEFORE ALL TESTS: \t" + lt);
+	}
+	@AfterClass
+	public static void AfterClass()
+	{
+		LocalTime lt = new LocalTime();
+		System.out.println("AFTER ALL TESTS: \t" + lt);
+	}
+
 	@Before
 	public void BeforeTest()
 	{
 		fn = new FunnyAlgorithms();
+		LocalTime lt = new LocalTime();
+		System.out.println("AFTER TEST: \t" + lt);
+	}
+
+	@After
+	public void AfterTest()
+	{
+		LocalTime lt = new LocalTime();
+		System.out.println("AFTER TEST: \t" + lt);
 	}
 
 
