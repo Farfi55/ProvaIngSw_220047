@@ -48,4 +48,11 @@ public class FunnyAlgorithmsTest
 		String input = "-32769";
 		fn.stringToIntConverter(input);
 	}
+
+	@org.junit.Test(expected = IllegalArgumentException.class)
+	public void stringToIntConverterNull()
+	{
+		String input = null;
+		fn.stringToIntConverter(input);
+	}
 }
