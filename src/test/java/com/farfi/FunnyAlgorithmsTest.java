@@ -2,6 +2,7 @@ package com.farfi;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
 
 import java.lang.UnsupportedOperationException;
 
@@ -62,5 +63,19 @@ public class FunnyAlgorithmsTest
 		int order = 3;
 		fn.selectionSort(arr, order);
 	}
+
+	@Test
+	public void selectionSortIncreasing()
+	{
+		int[] arr = new int[]{199, 7, 3, 0, -78};
+		int[] expectedSorted = new int[]{-78, 0, 3, 7, 199};
+		int order = 1;
+		fn.selectionSort(arr, order);
+		for (int i = 0; i < arr.length; i++)
+		{
+			Assert.assertEquals(arr[i], expectedSorted[i]);
+		}
+	}
+
 
 }
